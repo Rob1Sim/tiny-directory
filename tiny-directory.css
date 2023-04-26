@@ -5,6 +5,7 @@
     margin: 0 auto;
     font-family: Arial, sans-serif;
     font-size: 14px;
+
 }
 
 .tiny-directory-th, .tiny-directory-td {
@@ -61,4 +62,8 @@
 }
 .tiny-directory-tr{
     cursor: pointer;
+}
+.scrollable-div{
+    height: 50vh;
+    overflow-x:scroll ;
 }

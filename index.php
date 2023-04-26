@@ -25,6 +25,7 @@ function createDirectoryFromDBUsers(): string{
     if ( !empty( $users ) ) {
         //Génère le tableau
         $html = <<<HTML
+    <div class="scrollable-div">
     <table class="tiny-directory-table">
     <thead >
         <tr class="tiny-directory-tr">
@@ -54,7 +55,7 @@ HTML;
         $html.= <<<HTML
     </tbody>
 </table>
-
+</div>
 HTML;
         return $html;
     } else {
