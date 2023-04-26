@@ -1,4 +1,3 @@
-console.log("Tiny-directory is load")
 
 //On récupère le tableau
 const rows = document.querySelectorAll('tbody tr');
@@ -20,7 +19,6 @@ rows.forEach((row) => {
     const ppCopy = profilePicture.cloneNode(true);
 
     //Récupération des informations déjà affichés
-    console.log(`.tiny-directory-td email-${userId}`)
     const displayName = "Nom : "+row.querySelector(`.name-${userId}`).textContent;
     const email = "Email : "+row.querySelector(`.email-${userId}`).textContent;
     const phone = "phone"//row.querySelector(`.phone-${userId}`).textContent;
@@ -69,6 +67,21 @@ rows.forEach((row) => {
     row.addEventListener('keyup', (e) => {
         if(e.code === 'Enter' || e.code === 'Space'){
             detailsRow.classList.toggle('active');
+        }
+    });
+});
+//Champs de recherche
+const searchInput = document.getElementById('search-input');
+searchInput.addEventListener('input', () => {
+    const filterValue = searchInput.value.trim().toLowerCase();
+    rows.forEach(row => {
+        const userId = row.querySelector('[data-id]').getAttribute('data-id');
+        const displayName = row.querySelector(`.name-${userId}`).textContent.trim().toLowerCase();
+        const email = row.querySelector(`.email-${userId}`).textContent.trim().toLowerCase();
+        if (displayName.includes(filterValue) || email.includes(filterValue)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
         }
     });
 });

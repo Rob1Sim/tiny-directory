@@ -2,7 +2,6 @@
     border-collapse: collapse;
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
     font-family: Arial, sans-serif;
     font-size: 14px;
 
@@ -39,7 +38,7 @@
     height:fit-content;
 }
 
-.detail-div-flex,.detail-div-flex-text{
+.detail-div-flex,.detail-div-flex-text, .tiny-directory-div{
     display:flex;
 }
 .no-display-fields{
@@ -66,4 +65,8 @@
 .scrollable-div{
     height: 50vh;
     overflow-x:scroll ;
+}
+
+.tiny-directory-div{
+    flex-direction: column;
 }
