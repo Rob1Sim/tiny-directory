@@ -9,14 +9,13 @@ Version: 1.0
 Author URI: https://robin-sim.fr/
 */
 
+
+add_shortcode('users_directory','createDirectoryFromDBUsers');
+
 /**
  * Récupère les utilisateurs dans la base de donnée et les affect à un tableau HTML
  * @return string Le tableau HTML
  */
-
-add_shortcode('users_directory','createDirectoryFromDBUsers');
-
-
 function createDirectoryFromDBUsers(): string{
     //Ajout de la feuille de style et du javascript
     wp_enqueue_style('tiny-directory-css',plugins_url('tiny-directory.css',__FILE__));
