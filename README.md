@@ -23,5 +23,5 @@ git clone https://github.com/Rob1Sim/tiny-directory.git
     
 Then use this short code into your Wordpress pages : 
 ```bash
-users_directory
+[users_directory]
 ```
