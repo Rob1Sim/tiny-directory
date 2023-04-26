@@ -66,4 +66,9 @@ rows.forEach((row) => {
     row.addEventListener('click', () => {
         detailsRow.classList.toggle('active');
     });
+    row.addEventListener('keyup', (e) => {
+        if(e.code === 'Enter' || e.code === 'Space'){
+            detailsRow.classList.toggle('active');
+        }
+    });
 });

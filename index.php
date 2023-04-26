@@ -41,7 +41,7 @@ function createDirectoryFromDBUsers(): string{
             $userAvatar = get_avatar($userID);
             $linkToProfilePage = home_url()."/profile/$user->user_nicename";
             $html.= <<<HTML
-        <tr class="user-$userID tiny-directory-tr">
+        <tr class="user-$userID tiny-directory-tr" tabindex="0">
             <td class="no-display-fields" id="pp-$userID" data-id="$userID">$userAvatar</td>
             <td class="no-display-fields" id="login-$userID">$linkToProfilePage</td>
             <td class="tiny-directory-td name-$userID">$user->display_name</td>
